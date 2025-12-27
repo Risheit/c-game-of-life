@@ -7,14 +7,6 @@
  * This code is public domain. Feel free to use it for any purpose!
  */
 
-#include "SDL3/SDL_events.h"
-#include "SDL3/SDL_init.h"
-#include "SDL3/SDL_log.h"
-#include "SDL3/SDL_mouse.h"
-#include "SDL3/SDL_pixels.h"
-#include "SDL3/SDL_rect.h"
-#include "SDL3/SDL_render.h"
-#include "SDL3/SDL_timer.h"
 #include <stddef.h>
 #include <stdint.h>
 #include <stdlib.h>
@@ -75,6 +67,7 @@ static SDL_Window *g_window = nullptr;
 static SDL_Renderer *g_renderer = nullptr;
 static MapSystem g_map = {0};
 static SimulationSystem g_sim = {0};
+
 
 // Palette
 static const Color deadCellColor = {
@@ -369,3 +362,4 @@ SDL_AppResult SDL_AppIterate(void *appstate) {
 }
 
 void SDL_AppQuit(void *appstate, SDL_AppResult result) {}
+
